@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Lacquer&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,100&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #faffd9;
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+}
+#halUtama {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.user {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.namaUser {
+    color: #006a97;
+    font-weight: 600;
+}
+.iconUser {
+    font-size: 1.8rem;
+    color: #006a97;
+}
+
+.out {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #006a97;
+}
+.iconOut {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.keluar {
+    opacity: 0;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #006a97;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.keluar::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -0.2rem;
+    left: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #006a97;
+    transform: rotate(45deg);
+}
+.keluar:hover {
+    box-shadow: 1px 1px 5px #2acafd;
+    color: #006a97;
+    background-color: white;
+    border: 1px solid #006a97;
+}
+
+/* main section */
+main {
+    position: relative;
+    top: 5rem;
+    width: 60%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.t1 {
+    font-size: 1rem;
+    color: #000425;
+    font-weight: 500;
+}
+.t2 {
+    font-size: 2rem;
+    color: #006a97;
+    font-weight: 800;
+}
+.t3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000425;
+}
+.gambar {
+    width: 50%;
+    height: auto;
+}
+.g {
+    width: 20rem;
+}
+
+/* guesbook */
+.guesbook {
+    width: 90%;
+    height: 60px;
+    margin-top: 1rem;
+    background: #006a97;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+.guesbookTitle {
+    padding: 10px 15px;
+    background: #2acafd;
+    color: white;
+    margin-right: 0.5rem;
+}
+.guesbookTambah {
+    padding: 10px 15px;
+}
+.tambah {
+    position: relative;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+.tambah:hover {
+    background: rgb(68, 68, 68);
+    box-shadow: 2px 2px 5px rgb(68, 68, 68);
+
+    color: #00d9ff;
+}
+.iconCreate {
+    font-size: 1.8rem;
+    color: #2acafd;
+}
+.tbl {
+    margin-top: 5%;
+    width: 90%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #006a97;
+}
+
+.tbl thead th {
+    background-color: #006a97;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 0.7rem;
+    border: 1px solid #006a97;
+}
+
+.tbl tbody td {
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    border: 1px solid #006a97;
+}
+
+.tbl tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tbl tbody tr:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.psn {
+    width: 150px;
+    height: auto;
+    word-wrap: wrap;
+}
+.edit {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #2acafd;
+    padding: 5px;
+    border-radius: 5px;
+}
+.edit:hover {
+    background: rgb(68, 68, 68);
+    box-shadow: 2px 2px 5px rgb(68, 68, 68);
+}
+
+.hapus {
+    display: inline-block;
+    margin: auto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #ff006a;
+    padding: 5px;
+    border-radius: 5px;
+}
+.hapus:hover {
+    background: rgb(68, 68, 68);
+    box-shadow: 2px 2px 5px rgb(68, 68, 68);
+}
+
+/* tambah goesbook */
+
+.container {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 60%;
+    height: 30rem;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 5px #2acafd; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.textTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #006a97;
+}
+.cancel {
+    text-decoration: none;
+    position: relative;
+    right: -90%;
+}
+.iconCancel {
+    color: #00b3ff;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.container label {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.6rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 3px #00364d;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #006a97;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border: none;
+    outline: none;
+}
+.btn {
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+    width: 13rem;
+    height: 2.3rem;
+    outline: none;
+    border: none;
+    background-color: #00364d;
+    color: white;
+    border-radius: 5px;
+    transition: 0.5s all;
+}
+.btn:hover {
+    background-color: #065d7a;
+    color: #ffffff;
+    box-shadow: 0 0 8px #aaaaaa;
+}
